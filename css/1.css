@@ -1,0 +1,132 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.slider{
+	height:600px;
+	overflow: hidden;
+	width: 100%;
+}
+.each-silde img{
+	width: 100%;
+
+}
+.box-button{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.next{
+	position: absolute;
+	right: 0;
+	top: 40%;
+	cursor: pointer;
+}
+.pre{
+	position: absolute;
+	left: 0;
+	top: 40%;
+	cursor: pointer;
+
+}
+.button-dieu-huong{
+	position: absolute;
+	bottom: 20px;
+	right: 50%;
+	transform: translateX(50%);
+	z-index: 2;
+}
+.each-silde{
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;left: 0;
+}
+.active{
+	opacity: 1;
+	visibility: visible;
+}
+.bien-mat-o-ben-phai{
+	animation: bienmatobenphai 1s ease;
+}
+@-webkit-keyframes bienmatobenphai{
+	0%{
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0%);
+
+	}
+	100%{
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(100%);
+		
+	}
+}
+.bien-mat-o-ben-trai{
+	animation: bienmatobentrai 1s ease;
+}
+@-webkit-keyframes bienmatobentrai{
+	0%{
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(100%);
+
+	}
+	100%{
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(0%);
+		
+	}
+}
+
+.xuat-hien-tu-ben-trai{
+	animation: xuathientubentrai 1s linear forwards;
+}
+
+
+@-webkit-keyframes xuathientubentrai{
+	0%{
+		opacity: 0;
+		visibility: hidden;
+		transform:translateX(-100%);
+
+	}
+	100%{
+		opacity: 1;
+		visibility: visible;
+		transform:translateX(0%);
+		
+	}
+}
+.xuat-hien-tu-ben-phai{
+	animation: xuathientubenphai 1s linear forwards;
+}
+
+
+@-webkit-keyframes xuathientubenphai{
+	0%{
+		opacity: 0;
+		visibility: hidden;
+		transform:translateX(-100%);
+
+	}
+	100%{
+		opacity: 1;
+		visibility: visible;
+		transform:translateX(0%);
+		
+	}
+}
+.button-dieu-huong i {
+	margin-right: 20px;
+	cursor: pointer;
+}
+.iconactive{
+	background-color: black;
+}
